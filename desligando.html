@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desligando</title>
+    <style>
+        @keyframes load {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #2e2e2e;
+            transition: 1s;
+            overflow: hidden;
+        }
+
+        h1 {
+          color: #f2f2f2;
+        }
+
+        .desligando {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .desligando .pre {
+            height: 50px;
+            width: 50px;
+            background: url(img/carregamento.png)no-repeat;
+            background-position: center;
+            background-size: contain;
+            animation: load 1.5s infinite linear;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="desligando">
+      <div class="pre"></div>
+      <h1>Desligando</h1>
+    </div>
+    
+</body>
+</html>

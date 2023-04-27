@@ -1,0 +1,485 @@
+@charset "UTF-8";
+
+@keyframes load {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #f2f2f2;
+    color: #2e2e2e;
+    transition: 1s;
+    font-family: 'Tilt Neon', cursive;
+    overflow: hidden;
+}
+
+.dark {
+    background: #2e2e2e;
+    color: #f2f2f2;
+    z-index: 10;
+}
+
+.carregamento {
+    background: url(https://t.tudocdn.net/132895)no-repeat;
+    background-size: 100% 100%;
+}
+
+.tela-ligando {
+    display: block;
+    overflow: hidden;
+}
+
+.inicio {
+    color: #5C96F5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tela-bloqueio {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: url(https://img.freepik.com/fotos-premium/banner-horizontal-fundo-de-cor-abstrata-papel-de-parede-da-area-de-trabalho-tela-de-bloqueio-do-smartphone_672017-2783.jpg)no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #f2f2f2;
+    transition: 1s;
+    z-index: 10;
+}
+
+.tempo {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.tempo #horas {
+    height: 50%;
+    width: 100%;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.tempo #dia {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.login h1 {
+    text-align: center;
+    color: #2e2e2e;
+    text-shadow: 1px 1px 1px #f2f2f2;
+}
+
+.login input {
+    text-indent: 5px;
+}
+
+.login p {
+    color: #f3f3f3;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.login-load {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #d8d8d8;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 12px;
+}
+
+.foto {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: url('../img/logo.png')no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 0 auto 1 auto;
+}
+
+.login-load .pre {
+    height: 50px;
+    width: 50px;
+    background: url('../img/carregamento.png')no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: load 1.5s infinite linear;
+    margin-left: 1.5rem;
+}
+
+.opacity0 {
+    opacity: 0;
+    transition: .5s;
+}
+
+main {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: relative;
+}
+
+main h1.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+/* passo 1 */
+
+#passo1 {
+    transition: 1s;
+}
+
+#passo1 .padding {
+    padding: 10px;
+}
+
+#passo1 p {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    text-align: justify;
+    padding: 10px;
+    text-indent: 20px;
+}
+
+.passo1 {
+    top: 25%;
+    left: 15%;
+    height: 60px;
+    width: 130px;
+}
+
+#btn-prox1 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.buttons-tela {
+    z-index: 1;
+}
+
+.dark .buttons {
+    background: #2e2e2e;
+    color: #f2f2f2;
+}
+
+#titulo1 {
+    position: relative;
+    top: 5px;
+}
+
+/* passo 2 */
+
+#passo2 {
+    transition: 1s;
+}
+
+#passo2 .padding {
+    padding: 10px;
+}
+
+#passo2 p {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    text-align: justify;
+    padding: 10px;
+    text-indent: 20px;
+}
+
+.passo2 {
+    top: 25%;
+    right: 15%;
+    height: 60px;
+    width: 130px;
+}
+
+#passo2 div.case {
+    height: 60px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    transition: 1s;
+}
+
+#titulo2 {
+    position: relative;
+    top: 5px;
+}
+
+/* passo 3 */
+
+#passo3 {
+    transition: 1s;
+}
+
+#passo3 .padding {
+    padding: 10px;
+}
+
+#passo3 p {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    text-align: justify;
+    padding: 10px;
+    text-indent: 20px;
+}
+
+.passo3 {
+    top: 60%;
+    left: 15%;
+    height: 60px;
+    width: 130px;
+}
+
+#passo3 div.case {
+    height: 60px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    transition: 1s;
+}
+
+#titulo3 {
+    position: relative;
+    top: 5px;
+}
+
+/* passo 4 */
+
+#passo4 {
+    transition: 1s;
+}
+
+#passo4 .padding {
+    padding: 10px;
+}
+
+#passo4 p {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    text-align: justify;
+    padding: 10px;
+    text-indent: 20px;
+}
+
+.passo4 {
+    top: 60%;
+    right: 15%;
+    height: 60px;
+    width: 130px;
+}
+
+#passo4 div.case {
+    height: 60px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    transition: 1s;
+}
+
+#btn-voltar4 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#titulo4 {
+    position: relative;
+    top: 5px;
+}
+
+/* Para todos */
+
+div.passos {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.fundo {
+    background: #2e2e2e;
+    color: #f2f2f2;
+}
+
+.dark main .fundo {
+    background: #f2f2f2;
+    color: #2e2e2e;
+}
+
+.passo-tela {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.passo-tela2 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+div.case {
+    height: 60px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    transition: 1s;
+}
+
+.case-ativo {
+    height: 50px;
+    width: 90px;
+    padding: 5px;
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    left: 0;
+    transition: 1s;
+}
+
+.numeros {
+    background: #2e2e2e;
+    border-radius: 50%;
+    color: #f2f2f2;
+    cursor: pointer;
+    border: 3px outset #3e3e3e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.dark .numeros {
+    background: #f2f2f2;
+    color: #2e2e2e;
+}
+
+.btn-fundo {
+    background: #f2f2f2;
+    color: #2e2e2e;
+    transition: .5s;
+}
+
+.dark .btn-fundo {
+    background: #2e2e2e;
+    color: #f2f2f2;
+    transition: .5s;
+}
+
+.container-buttons {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 20px;
+    top: 5px;
+    gap: 5px;
+}
+
+.buttons {
+    width: 60px;
+    background: #f2f2f2;
+    color: #2e2e2e;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.buttons-fundo {
+    z-index: -1;
+}
+
+.buttons-tela {
+    z-index: 1;
+}
+
+.dark .buttons {
+    background: #2e2e2e;
+    color: #f2f2f2;
+}
+
+.none {
+    display: none;
+}
+
+.passo-prox {
+    left: 100%;
+}
+
+.passo-voltar {
+    left: -100%;
+}
